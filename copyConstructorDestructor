@@ -1,0 +1,78 @@
+#include<iostream>
+using namespace std;
+class Duration{
+	int days;
+	int hours;
+	int minutes;
+	long seconds;
+	public:
+		//NULL CONSTRUCTOR
+		Duration(){
+			days=0;
+			hours=0;
+			minutes=0;
+			seconds=0;
+		}
+		//COPY CONSTRUCTOR
+		Duration(Duration &n)
+		{
+		    days=n.days;
+		    hours=n.hours;
+		    minutes=n.minutes;
+		    seconds=n.seconds;
+		}
+		//FIRST CONSTRUCTOR
+		Duration(int days,int hours, int minutes,long seconds)
+		{
+			this->days=days;
+			this->hours=hours;
+			this->minutes=minutes;
+			this->seconds=seconds;
+		}
+		//SECOND CONSTRUCTOR
+		Duration(int  n)
+		{ 
+   			days = n / (24 * 3600); 
+   			n = n % (24 * 3600); 
+   			hours = n / 3600; 
+			n %= 3600; 
+			minutes = n / 60 ; 
+			n %= 60; 
+			seconds = n; 
+		}
+		//DESTRUCTOR
+		~Duration()
+		{
+		    cout<<"deleting duration:";
+		    days=0;
+		    hours=0;
+		    minutes=0;
+		    seconds=0;
+		    cout<<"\n successful deletion";
+		}
+		//DISPLAY FUNCTION
+ 		void display()
+  		{
+  			std::cout<<"the day is: "  <<days;
+			std::cout<<"\nthe hours is: "<<hours;
+			std::cout<<"\nthe minutes is: "<<minutes;
+			std::cout<<"\nthe seconds is: "<<seconds;
+		}
+};
+int main()
+{
+    int n;
+    std::cout<<"Enter the duration which you want to calculate: ";
+    std::cin>>n;
+	Duration d1(n);
+	
+	//CALLING COPY CONSTRUCTOR
+	Duration d2=d1;
+	//CALLING DISPLAY FUNCTION
+	d1.display();
+	cout<<"\n\n";
+
+	d2.display();
+	cout<<"\n\n";
+	return 0;
+}
