@@ -146,10 +146,10 @@ class AllRounder:public player
 int main(){
     
     AllRounder ar;
-    Batsmen bat(5, "Ahmad", 5, 9, 16, "Left", 5, 4434, 45.7, 89.5);
-	Bowler bowl(7, "Abdullah", 8, 17, 6, "Spin", 89.6, 54, 23.7, 56.9);
-	WicketKeeper wk(6, "Haris", 9, 23, 12, "Right", 2305, 43, 35);
-	AllRounder ar(3, "Zeeshan", 2, 5, 7, "Left", 5, 2654, 39.5, 95.7, "Spin", 83.7, 47, 28.3, 63.9);
+    Batsmen bat(5, "aee", 2, 16, "Left", 5, 34, 5.7, 9.5);
+	Bowler bowl(7, "uj", 17, 6, "Spin", 9.6, 54, 3.7, 6.9);
+	WicketKeeper wk(6, "jj", 9, 23, 12, "Right", 25, 3, 5);
+	AllRounder ar(3, "aed",  5, 7, "Left", 5, 54, 39.5, 5.7, "Spin", 3.7, 47, 8.3, 6.9);
 	
 	int option;
 	char again;
